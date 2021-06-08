@@ -26,7 +26,6 @@ production stylesheet in assets/built/screen.css
 
 */
 
-
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
@@ -49,7 +48,6 @@ body {
     position: absolute;
     text-indent: -9999px;
 }
-
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
@@ -105,7 +103,6 @@ body {
     }
 }
 
-
 /* 4. Site Header
 /* ---------------------------------------------------------- */
 
@@ -127,7 +124,7 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0,0,0,0.18);
+    background: rgba(0, 0, 0, 0.18);
 }
 
 .site-header-background:after {
@@ -140,7 +137,7 @@ body {
     z-index: 10;
     display: block;
     height: 140px;
-    background: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
 }
 
 .site-header-background.no-image:before,
@@ -163,7 +160,7 @@ body {
     z-index: 10;
     margin: 0 0 0 -2px;
     padding: 0;
-    font-size: 5.0rem;
+    font-size: 5rem;
     line-height: 1em;
     font-weight: 600;
 }
@@ -208,7 +205,6 @@ body {
     text-align: center;
 }
 
-
 /* 4.2 Archive header (tag and author post lists)
 /* ---------------------------------------------------------- */
 
@@ -225,20 +221,18 @@ body {
     padding-bottom: 0;
     color: var(--darkgrey);
     background: #fff;
-    opacity: 1.0;
+    opacity: 1;
 }
 
 .site-archive-header .no-image .site-description {
     color: var(--midgrey);
-    opacity: 1.0;
+    opacity: 1;
 }
-
 
 .site-archive-header .no-image .site-header-content {
     padding: 5vw 0 10px;
     border-bottom: 1px solid color-mod(var(--lightgrey) l(+12%));
 }
-
 
 /* Special header styles for smaller screens */
 
@@ -273,7 +267,6 @@ body {
     }
 }
 
-
 /* 5. Site Navigation
 /* ---------------------------------------------------------- */
 
@@ -283,7 +276,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color-mod(var(--darkgrey) l(-5%));
+    background: var(--darkgrey);
 }
 
 .site-nav {
@@ -303,7 +296,8 @@ body {
     display: flex;
 }
 
-.site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
+.site-header-background:not(.responsive-header-img)
+    .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     content: "";
     position: absolute;
@@ -311,12 +305,6 @@ body {
     z-index: 1000;
     width: 40px;
     height: 100%;
-}
-
-.site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
-.site-nav-main .site-nav-left-wrapper:after {
-    right: 0;
-    background: linear-gradient(to right, color-mod(var(--darkgrey) l(-5%) a(0)) 0%,color-mod(var(--darkgrey) l(-5%)) 100%);
 }
 
 .site-nav-left {
@@ -389,7 +377,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 0 0 -12px;
     padding: 0;
     list-style: none;
-    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .nav li {
@@ -444,7 +432,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     font-weight: 400;
     text-transform: none;
     opacity: 0;
-    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     transform: translateY(175%);
 }
 
@@ -503,7 +491,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .social-link:hover {
-    opacity: 1.0;
+    opacity: 1;
 }
 
 .social-link svg {
@@ -525,26 +513,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .social-link-rss svg {
     height: 1.9rem;
-}
-
-.subscribe-button {
-    display: block;
-    margin: 0 0 0 10px;
-    padding: 4px 10px;
-    border: #fff 1px solid;
-    color: #fff;
-    line-height: 1em;
-    border-radius: 10px;
-    opacity: 0.8;
-}
-
-.subscribe-button:hover {
-    text-decoration: none;
-    opacity: 1;
-}
-
-.site-nav-right .nav + .subscribe-button {
-    margin-left: 24px;
 }
 
 .rss-button {
@@ -597,7 +565,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         display: none;
     }
 }
-
 
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
@@ -759,7 +726,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     white-space: nowrap;
     background: var(--darkgrey);
     border-radius: 3px;
-    box-shadow: rgba(39,44,49,0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+    box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px,
+        rgba(39, 44, 49, 0.03) 1px 3px 8px;
     opacity: 0;
     transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: translateY(6px);
@@ -767,7 +735,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .author-list-item:hover .author-name-tooltip {
-    opacity: 1.0;
+    opacity: 1;
     transform: translateY(0px);
 }
 
@@ -895,7 +863,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 }
 
-
 /* Adjust some margins for smaller screens */
 @media (max-width: 1170px) {
     .post-card {
@@ -922,7 +889,6 @@ make sure this only happens on large viewports / desktop-ish devices.
         font-size: 1.6rem;
     }
 }
-
 
 /* 7. Single Post
 /* ---------------------------------------------------------- */
@@ -1020,7 +986,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     padding: 0 170px 6vw;
     min-height: 230px;
     font-family: Georgia, serif;
-    font-size: 2.0rem;
+    font-size: 2rem;
     line-height: 1.6em;
     background: #fff;
 }
@@ -1130,7 +1096,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 }
 
-
 /* Full bleed images (#full)
 Super neat trick courtesy of @JoelDrapper
 
@@ -1143,7 +1108,6 @@ Usage (In Ghost edtior):
     max-width: none;
     width: 100vw;
 }
-
 
 /* Image captions
 
@@ -1159,7 +1123,6 @@ Usage (In Ghost editor):
     margin-bottom: 1.5em;
     text-align: center;
 }
-
 
 /* Override third party iframe styles */
 .post-full-content iframe {
@@ -1193,7 +1156,7 @@ Usage (In Ghost editor):
     padding: 0 5px 2px;
     font-size: 0.8em;
     line-height: 1em;
-    font-weight: 400!important;
+    font-weight: 400 !important;
     background: var(--whitegrey);
     border-radius: 3px;
 }
@@ -1267,7 +1230,8 @@ Usage (In Ghost editor):
 .post-full-content h5,
 .post-full-content h6 {
     color: color-mod(var(--darkgrey) l(-5%));
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .post-full-content h1 {
@@ -1345,7 +1309,7 @@ Usage (In Ghost editor):
     padding: 0.4em 1em 0.9em;
     border: 0;
     color: var(--blue);
-    font-family: Georgia,serif;
+    font-family: Georgia, serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -1368,7 +1332,7 @@ Usage (In Ghost editor):
 
 .post-full-content h6 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 @media (max-width: 800px) {
@@ -1452,7 +1416,8 @@ Usage (In Ghost editor):
     width: auto;
     border-spacing: 0;
     border-collapse: collapse;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1.6rem;
     white-space: nowrap;
     vertical-align: top;
@@ -1460,20 +1425,39 @@ Usage (In Ghost editor):
 
 .post-full-content table {
     -webkit-overflow-scrolling: touch;
-    background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+    background: radial-gradient(
+                ellipse at left,
+                rgba(0, 0, 0, 0.2) 0%,
+                rgba(0, 0, 0, 0) 75%
+            )
+            0 center,
+        radial-gradient(
+                ellipse at right,
+                rgba(0, 0, 0, 0.2) 0%,
+                rgba(0, 0, 0, 0) 75%
+            )
+            100% center;
     background-attachment: scroll, scroll;
     background-size: 10px 100%, 10px 100%;
     background-repeat: no-repeat;
 }
 
 .post-full-content table td:first-child {
-    background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
     background-size: 20px 100%;
     background-repeat: no-repeat;
 }
 
 .post-full-content table td:last-child {
-    background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
     background-position: 100% 0;
     background-size: 20px 100%;
     background-repeat: no-repeat;
@@ -1494,7 +1478,6 @@ Usage (In Ghost editor):
     padding: 6px 12px;
     border: color-mod(var(--whitegrey) l(-1%) s(-5%)) 1px solid;
 }
-
 
 /* 7.1. Post Byline
 /* ---------------------------------------------------------- */
@@ -1524,7 +1507,7 @@ Usage (In Ghost editor):
     font-size: 1.2rem;
     line-height: 1.2em;
     letter-spacing: 0.2px;
-    text-transform: uppercase;;
+    text-transform: uppercase;
 }
 
 .post-full-byline-meta h4 {
@@ -1572,7 +1555,8 @@ Usage (In Ghost editor):
     line-height: 1.5em;
     background: white;
     border-radius: 3px;
-    box-shadow: rgba(39,44,49,0.08) 0 12px 26px, rgba(39, 44, 49, 0.06) 1px 3px 8px;
+    box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px,
+        rgba(39, 44, 49, 0.06) 1px 3px 8px;
     opacity: 0;
     transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(0.98) translateY(15px);
@@ -1594,7 +1578,7 @@ Usage (In Ghost editor):
 }
 
 .author-list-item .author-card.hovered {
-    opacity: 1.0;
+    opacity: 1;
     transform: scale(1) translateY(0px);
     pointer-events: auto;
 }
@@ -1687,178 +1671,15 @@ Usage (In Ghost editor):
     }
 }
 
-
 /* 7.2. Members Subscribe Form
 /* ---------------------------------------------------------- */
-.subscribe-form {
-    margin: 1.5em 0;
-    padding: 6.5vw 7vw 8vw;
-    border: color-mod(var(--lightgrey) l(+10%)) 1px solid;
-    text-align: center;
-    background: linear-gradient(color-mod(var(--whitegrey) l(+6%)), color-mod(var(--whitegrey) l(+4%)));
-    border-radius: 3px;
-}
 
-.subscribe-form-title {
-    margin: 0 0 3px 0;
-    padding: 0;
-    color: var(--darkgrey);
-    font-size: 3.5rem;
-    line-height: 1;
-    font-weight: 600;
-}
-
-.subscribe-form-description {
-    margin-bottom: 0.2em 0 1em;
-    color: var(--midgrey);
-    font-size: 2.1rem;
-    line-height: 1.55em;
-}
-
-.subscribe-form form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 460px;
-}
-
-.subscribe-form .form-group {
-    align-self: stretch;
-    display: flex;
-}
-
-.subscribe-email {
-    display: block;
-    padding: 10px;
-    width: 100%;
-    border: color-mod(var(--lightgrey) l(+7%)) 1px solid;
-    color: var(--midgrey);
-    font-size: 1.8rem;
-    line-height: 1em;
-    font-weight: normal;
-    user-select: text;
-    border-radius: 5px;
-    transition: border-color 0.15s linear;
-
-    -webkit-appearance: none;
-}
-
-.subscribe-email:focus {
-    outline: 0;
-    border-color: color-mod(var(--lightgrey) l(-2%));
-}
-
-.subscribe-form button {
-    position: relative;
-    display: inline-block;
-    margin: 0 0 0 10px;
-    padding: 0 20px;
-    height: 43px;
-    outline: none;
-    color: #fff;
-    font-size: 1.5rem;
-    line-height: 39px;
-    font-weight: 400;
-    text-align: center;
-    background: linear-gradient(
-    color-mod(var(--blue) whiteness(+7%)),
-    color-mod(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color-mod(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color-mod(var(--blue) lightness(-4%) saturation(-10%))
-    );
-    border-radius: 5px;
-
-    -webkit-font-smoothing: subpixel-antialiased;
-}
-
-.subscribe-form button:active,
-.subscribe-form button:focus {
-    background: color-mod(var(--blue) lightness(-9%) saturation(-10%));
-}
-
-.subscribe-form .button-loader,
-.subscribe-form .message-success,
-.subscribe-form .message-error {
-    display: none;
-}
-
-.subscribe-form .loading .button-content {
-    visibility: hidden;
-}
-
-.subscribe-form .loading .button-loader {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    display: inline-block;
-    margin-left: -19px;
-    transform: scale(0.7);
-}
-
-.subscribe-form .button-loader svg path,
-.subscribe-form .button-loader svg rect {
-    fill: #fff;
-}
-
-.subscribe-form .success .message-success,
-.subscribe-form .invalid .message-error,
-.subscribe-form .error .message-error {
-    margin: 1em auto 0;
-    max-width: 400px;
-    color: var(--red);
-    font-size: 1.6rem;
-    line-height: 1.5em;
-    text-align: center;
-}
-
-.subscribe-form .success .message-success {
-    display: block;
-    color: color-mod(var(--green) l(-5%));
-}
-
-.subscribe-form .invalid .message-error,
-.subscribe-form .error .message-error {
-    display: block;
-}
-
-
-@media (max-width: 650px) {
-    .subscribe-form-title {
-        font-size: 2.4rem;
-    }
-
-    .subscribe-form-description {
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .subscribe-form form {
-        flex-direction: column;
-    }
-
-    .subscribe-form .form-group {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .subscribe-form button {
-        margin: 10px 0 0 0;
-        width: 100%;
-    }
-}
-
+/* No Subscriber functionality */
 
 /* 7.3. Comments
 /* ---------------------------------------------------------- */
 
-.post-full-comments {
-    margin: 0 auto;
-    max-width: 840px;
-}
-
+/* No comments */
 
 /* 7.4. Related posts
 /* ---------------------------------------------------------- */
@@ -1896,7 +1717,7 @@ Usage (In Ghost editor):
 }
 
 .read-next .post-card:hover .post-card-image {
-    opacity: 1.0;
+    opacity: 1;
 }
 
 .read-next .post-card-excerpt {
@@ -1923,7 +1744,10 @@ Usage (In Ghost editor):
     overflow: hidden;
     margin: 0 25px 50px;
     padding: 25px;
-    background: linear-gradient(color-mod(var(--darkgrey) l(+2%)), color-mod(var(--darkgrey) l(-5%)));
+    background: linear-gradient(
+        color-mod(var(--darkgrey) l(+2%)),
+        color-mod(var(--darkgrey) l(-5%))
+    );
     border-radius: 3px;
 }
 
@@ -2067,7 +1891,6 @@ Usage (In Ghost editor):
     }
 }
 
-
 /* 7.5. Koenig Styles
 /* ---------------------------------------------------------- */
 
@@ -2111,9 +1934,10 @@ Usage (In Ghost editor):
 }
 
 .post-full-content figcaption {
-    margin: 1.0em auto 0;
+    margin: 1em auto 0;
     color: color-mod(var(--midgrey) l(-10%));
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 75%;
     line-height: 1.5em;
     text-align: center;
@@ -2134,7 +1958,6 @@ Usage (In Ghost editor):
 .kg-embed-card .fluid-width-video-wrapper {
     margin: 0;
 }
-
 
 @media (max-width: 1040px) {
     .post-full-content .kg-width-full .kg-image {
@@ -2198,7 +2021,8 @@ Usage (In Ghost editor):
     display: flex;
     min-height: 148px;
     color: var(--darkgrey);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     text-decoration: none;
     border-radius: 3px;
     box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.09);
@@ -2383,7 +2207,7 @@ Usage (In Ghost editor):
     margin: -4px 0 0;
     width: 110px;
     height: 110px;
-    box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 6px;
 }
 
 .author-header-content .author-bio {
@@ -2391,7 +2215,7 @@ Usage (In Ghost editor):
     flex-shrink: 0;
     margin: 6px 0 0;
     max-width: 46em;
-    font-size: 2.0rem;
+    font-size: 2rem;
     line-height: 1.3em;
     font-weight: 400;
     opacity: 0.8;
@@ -2416,12 +2240,12 @@ Usage (In Ghost editor):
 
 .no-image .author-header-content .author-bio {
     color: var(--midgrey);
-    opacity: 1.0;
+    opacity: 1;
 }
 
 .no-image .author-header-content .author-meta {
     color: var(--midgrey);
-    opacity: 1.0;
+    opacity: 1;
 }
 
 .author-social-link a {
@@ -2505,7 +2329,6 @@ Usage (In Ghost editor):
     }
 }
 
-
 /* 9. Error Template
 /* ---------------------------------------------------------- */
 
@@ -2586,533 +2409,157 @@ Usage (In Ghost editor):
     }
 }
 
-
 /* 10. Subscribe Message and Overlay
 /* ---------------------------------------------------------- */
 
-.subscribe-notification {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9000;
-    padding: 20px 0;
-    color: #fff;
-    text-align: center;
-    background: var(--green);
-    transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
-    transform: translateY(-175%);
-}
-
-.subscribe-notification.subscribe-failure-message {
-    background: var(--red);
-}
-
-.subscribe-success .subscribe-success-message {
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.subscribe-failure .subscribe-failure-message {
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.subscribe-notification.close {
-    visibility: hidden;
-    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-    transform: translateY(-175%);
-}
-
-.subscribe-notification .subscribe-close-button {
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.subscribe-notification .subscribe-close-button:before,
-.subscribe-notification .subscribe-close-button:after {
-    top: 31px;
-    right: 20px;
-    width: 18px;
-    height: 2px;
-}
-
-.subscribe-close-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-}
-
-.subscribe-close-button {
-    position: absolute;
-    top: 16px;
-    right: 20px;
-    z-index: 2000;
-    display: block;
-    width: 40px;
-    height: 40px;
-}
-
-.subscribe-close-button:before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 4px;
-    display: block;
-    width: 32px;
-    height: 1px;
-    background: #fff;
-    opacity: 0.8;
-    transform: rotate(45deg);
-}
-
-.subscribe-close-button:after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 4px;
-    display: block;
-    width: 32px;
-    height: 1px;
-    background: #fff;
-    opacity: 0.8;
-    transform: rotate(-45deg);
-}
-
-.subscribe-close-overlay:hover,
-.subscribe-close-button:hover {
-    cursor: default;
-}
-
-.subscribe-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(9,10,11,0.97);
-    opacity: 0;
-    transition: opacity 0.2s ease-in;
-    pointer-events: none;
-}
-
-.subscribe-overlay:target {
-    z-index: 2001;
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.subscribe-overlay-content {
-    position: relative;
-    margin: 0 0 5vw 0;
-    padding: 4vw;
-    color: #fff;
-    text-align: center;
-}
-
-.subscribe-overlay .subscribe-form {
-    border: none;
-    color: #fff;
-    background: none;
-}
-
-.subscribe-overlay-logo {
-    position: fixed;
-    top: 23px;
-    left: 30px;
-    height: 30px;
-}
-
-.subscribe-overlay-title {
-    display: inline-block;
-    margin: 0 0 10px 0;
-    font-size: 5.2rem;
-    line-height: 1.15em;
-}
-
-.subscribe-overlay-description {
-    margin: 0 auto 50px;
-    max-width: 650px;
-    color: #fff;
-    font-family: Georgia, serif;
-    font-size: 2.4rem;
-    line-height: 1.3em;
-    font-weight: 300;
-    opacity: 0.8;
-}
-
-.subscribe-overlay form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 540px;
-}
-
-.subscribe-overlay .form-group {
-    flex-grow: 1;
-}
-
-.subscribe-overlay .subscribe-email {
-    display: block;
-    padding: 14px 20px;
-    width: 100%;
-    border: none;
-    color: var(--midgrey);
-    font-size: 2rem;
-    line-height: 1em;
-    font-weight: normal;
-    letter-spacing: 0.5px;
-    user-select: text;
-    border-radius: 8px;
-    transition: border-color 0.15s linear;
-
-    -webkit-appearance: none;
-}
-
-.subscribe-email:focus {
-    outline: 0;
-    border-color: color-mod(var(--lightgrey) l(-2%));
-}
-
-.subscribe-overlay button {
-    display: inline-block;
-    margin: 0 0 0 15px;
-    padding: 0 25px;
-    height: 52px;
-    outline: none;
-    color: #fff;
-    font-size: 1.7rem;
-    line-height: 38px;
-    font-weight: 400;
-    text-align: center;
-    background: linear-gradient(
-    color-mod(var(--blue) whiteness(+7%)),
-    color-mod(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color-mod(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color-mod(var(--blue) lightness(-4%) saturation(-10%))
-    );
-    border-radius: 8px;
-
-    -webkit-font-smoothing: subpixel-antialiased;
-}
-
-.subscribe-overlay button:active,
-.subscribe-overlay button:focus {
-    background: color-mod(var(--blue) lightness(-9%) saturation(-10%));
-}
-
-.subscribe-overlay .loading .button-loader {
-    top: 5px;
-}
-
-@media (max-width: 500px) {
-    .subscribe-overlay button {
-        margin: 12px 0 0;
-    }
-}
-
+/* No subscribe functionality */
 
 /* 11. Site Footer
 /* ---------------------------------------------------------- */
 
-.site-footer {
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 60px;
-    color: #fff;
-    background: color-mod(var(--darkgrey) l(-5%));
+/* Start copy/paste from landing page */
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 15px;
+    max-width: 1080px;
 }
-
-.site-footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    color: rgba(255,255,255,0.7);
-    font-size: 1.3rem;
-}
-
-.site-footer-content a {
-    color: rgba(255,255,255,0.7);
-}
-
-.site-footer-content a:hover {
-    color: rgba(255,255,255,1);
-    text-decoration: none;
-}
-
-.site-footer-nav {
-    display: flex;
-}
-
-.site-footer-nav a {
-    position: relative;
-    margin-left: 20px;
-}
-
-.site-footer-nav a:before {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: -11px;
+.container:after {
+    content: " ";
+    visibility: hidden;
     display: block;
-    width: 2px;
-    height: 2px;
-    background: #fff;
-    border-radius: 100%;
+    height: 0;
+    clear: both;
 }
-
-.site-footer-nav a:first-of-type:before {
-    display: none;
+.footer-02 {
+    background-color: var(--darkgrey);
+    color: white;
+    padding: 40px 0;
 }
-
-@media (max-width: 650px) {
-    .site-footer-content {
-        flex-direction: column;
+.footer-02 .social-buttons__link {
+    opacity: 0.5;
+}
+.footer-02 .social-buttons__link:hover {
+    opacity: 1;
+}
+.footer-02 .social-buttons__list {
+    justify-content: flex-end;
+}
+@media (max-width: 750px) {
+    .footer-02 .social-buttons__list {
+        justify-content: flex-start;
     }
+}
+.footer-02__text.content_box p {
+    margin: 0;
+}
+.footer-02__text.content_box p:first-child {
+    display: inline;
+}
+.footer-02__text.content_box a {
+    text-decoration: underline;
+    color: inherit !important;
+    transition: all 0.2s ease;
+}
+.footer-02__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+@media (max-width: 750px) {
+    .footer-02__wrapper {
+        display: block;
+    }
+}
+.footer-02__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footer-02__item {
+    margin-bottom: 10px;
+}
+.footer-02__text {
+    max-width: 600px;
+    opacity: 0.7;
+}
+.text-white .footer-02__text {
+    opacity: 0.85;
+}
+@media (max-width: 750px) {
+    .footer-02__text {
+        margin-bottom: 20px;
+    }
+}
+.footer-02 a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    .site-footer-nav a:first-child {
-        margin-left: 0;
+.footer-02__wrapper {
+    align-items: center;
+}
+.footer-02__text > a > svg {
+    height: 28px;
+    fill: #ffff;
+}
+
+.footer-02__text > a:hover {
+    cursor: pointer;
+    opacity: 50%;
+    fill: #ffff;
+}
+
+@media (max-width: 750px) {
+    .footer-02__text,
+    .footer-02__text svg {
+        text-align: center;
     }
 }
 
+.flok-socials > *:not(:last-child) {
+    margin-right: 5px;
+}
+
+/* End copy/paste from landing page */
 
 /* 12. Dark Mode
 /* ---------------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-    html:not(.no-dark) body {
-        color: rgba(255, 255, 255, 0.75);
-        background: var(--darkmode);
-    }
 
-    html:not(.no-dark) img {
-        opacity: 0.9;
-    }
+/* Don't allow dark mode for now */
 
-    html:not(.no-dark) .site-header-background:before {
-        background: rgba(0,0,0,0.6);
-    }
+/* Flok socials nav */
 
-    html:not(.no-dark) .post-feed {
-        background: var(--darkmode);
-    }
+.flok-socials > a {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flok-socials > a > svg {
+    height: 28px;
+    fill: #ffff;
+}
 
-    html:not(.no-dark) .post-card,
-    html:not(.no-dark) .post-card:hover {
-        border-bottom-color: color-mod(var(--darkmode) l(+8%));
-    }
+.flok-socials > a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
 
-    html:not(.no-dark) .author-profile-image {
-        background: var(--darkmode);
+@media (max-width: 750px) {
+    .flok-socials,
+    .flok-socials svg {
+        text-align: center;
     }
+}
 
-    html:not(.no-dark) .post-card-byline-content a {
-        color: rgba(255, 255, 255, 0.75);
-    }
+.flok-socials {
+    display: flex;
+    flex-wrap: nowrap;
+}
 
-    html:not(.no-dark) .post-card-byline-content a:hover {
-        color: #fff;
-    }
-
-    html:not(.no-dark) .post-card-image {
-        background: var(--darkmode);
-    }
-
-    html:not(.no-dark) .post-card-title {
-        color: rgba(255, 255, 255, 0.85);
-    }
-
-    html:not(.no-dark) .post-card-excerpt {
-        color: color-mod(var(--midgrey) l(+10%));
-    }
-
-    html:not(.no-dark) .author-avatar,
-    html:not(.no-dark) .static-avatar {
-        border-color: color-mod(var(--darkgrey) l(+2%));
-    }
-
-    html:not(.no-dark) .site-main,
-    html:not(.no-dark) .post-template .site-main,
-    html:not(.no-dark) .page-template .site-main {
-        background: var(--darkmode);
-    }
-
-    html:not(.no-dark) .post-full-content {
-        background: var(--darkmode);
-    }
-
-    html:not(.no-dark) .post-full-title {
-        color: rgba(255, 255, 255, 0.9);
-    }
-
-    html:not(.no-dark) .post-full-custom-excerpt {
-        color: color-mod(var(--midgrey) l(+10%));
-    }
-
-    html:not(.no-dark) .post-full-image {
-        background-color: color-mod(var(--darkmode) l(+8%));
-    }
-
-    html:not(.no-dark) .post-full-byline {
-        border-top-color: color-mod(var(--darkmode) l(+15%));
-    }
-
-    html:not(.no-dark) .post-full-byline-meta h4 a {
-        color: rgba(255, 255, 255, 0.75);
-    }
-
-    html:not(.no-dark) .post-full-byline-meta h4 a:hover {
-        color: #fff;
-    }
-
-    html:not(.no-dark) .author-list-item .author-card {
-        background: color-mod(var(--darkmode) l(+4%));
-        box-shadow: 0 12px 26px rgba(0,0,0,0.4);
-    }
-
-    html:not(.no-dark) .author-list-item .author-card:before {
-        border-top-color: color-mod(var(--darkmode) l(+4%));
-    }
-
-    html:not(.no-dark) .no-image .author-social-link a {
-        color: rgba(255, 255, 255, 0.75);
-    }
-
-    html:not(.no-dark) .post-full-content h1,
-    html:not(.no-dark) .post-full-content h2,
-    html:not(.no-dark) .post-full-content h3,
-    html:not(.no-dark) .post-full-content h4,
-    html:not(.no-dark) .post-full-content h6 {
-        color: rgba(255, 255, 255, 0.9);
-    }
-
-    html:not(.no-dark) .post-full-content a {
-        color: #fff;
-        box-shadow: inset 0 -1px 0 #fff;
-    }
-
-    html:not(.no-dark) .post-full-content strong {
-        color: #fff;
-    }
-
-    html:not(.no-dark) .post-full-content em {
-        color: #fff;
-    }
-
-    html:not(.no-dark) .post-full-content code {
-        color: #fff;
-        background: #000;
-    }
-
-    html:not(.no-dark) hr {
-        border-top-color: color-mod(var(--darkmode) l(+8%));
-    }
-
-    html:not(.no-dark) .post-full-content hr:after {
-        background: color-mod(var(--darkmode) l(+8%));
-        box-shadow: var(--darkmode) 0 0 0 5px;
-    }
-
-    html:not(.no-dark) .post-full-content figcaption {
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    html:not(.no-dark) .post-full-content table td:first-child {
-        background-image: linear-gradient(to right, var(--darkmode) 50%, color-mod(var(--darkmode) a(0%)) 100%);
-    }
-
-    html:not(.no-dark) .post-full-content table td:last-child {
-        background-image: linear-gradient(to left, var(--darkmode) 50%, color-mod(var(--darkmode) a(0%)) 100%);
-    }
-
-    html:not(.no-dark) .post-full-content table th {
-        color: rgba(255, 255, 255, 0.85);
-        background-color: color-mod(var(--darkmode) l(+8%));
-    }
-
-    html:not(.no-dark) .post-full-content table th,
-    html:not(.no-dark) .post-full-content table td {
-        border: color-mod(var(--darkmode) l(+8%)) 1px solid;
-    }
-
-    html:not(.no-dark) .post-full-content .kg-bookmark-container,
-    html:not(.no-dark) .post-full-content .kg-bookmark-container:hover {
-        color: rgba(255, 255, 255, 0.75);
-        box-shadow: 0 0 1px rgba(255,255,255,0.9);
-    }
-
-    html:not(.no-dark) .post-full-content input {
-        color: color-mod(var(--midgrey) l(-30%));
-    }
-
-    html:not(.no-dark) .kg-bookmark-title {
-        color: #fff;
-    }
-
-    html:not(.no-dark) .kg-bookmark-description {
-        color: rgba(255, 255, 255, 0.75);
-    }
-
-    html:not(.no-dark) .kg-bookmark-metadata {
-        color: rgba(255, 255, 255, 0.75);
-    }
-
-    html:not(.no-dark) .site-archive-header .no-image {
-        color: rgba(255, 255, 255, 0.9);
-        background: var(--darkmode);
-    }
-
-    html:not(.no-dark) .site-archive-header .no-image .site-header-content {
-        border-bottom-color: color-mod(var(--darkmode) l(+15%));
-    }
-
-    html:not(.no-dark) .site-header-content .author-profile-image {
-        box-shadow: 0 0 0 6px hsla(0,0%,100%,0.04);
-    }
-
-    html:not(.no-dark) .subscribe-form {
-        border: none;
-        background: linear-gradient(color-mod(var(--darkmode) l(-6%)), color-mod(var(--darkmode) l(-3%)));
-    }
-
-    html:not(.no-dark) .subscribe-form-title {
-        color: rgba(255, 255, 255, 0.9);
-    }
-
-    html:not(.no-dark) .subscribe-form p {
-        color: rgba(255, 255, 255, 0.7);
-    }
-
-    html:not(.no-dark) .subscribe-email {
-        border-color: color-mod(var(--darkmode) l(+6%));
-        color: rgba(255, 255, 255, 0.9);
-        background: color-mod(var(--darkmode) l(+3%));
-    }
-
-    html:not(.no-dark) .subscribe-email:focus {
-        border-color: color-mod(var(--darkmode) l(+25%));
-    }
-
-    html:not(.no-dark) .subscribe-form button {
-        opacity: 0.9;
-    }
-
-    html:not(.no-dark) .subscribe-form .invalid .message-error,
-    html:not(.no-dark) .subscribe-form .error .message-error {
-        color: color-mod(var(--red) l(+5%) s(-5%));
-    }
-
-    html:not(.no-dark) .subscribe-form .success .message-success {
-        color: color-mod(var(--green) l(+5%) s(-5%));
-    }
+.flok-socials > *:not(:last-child) {
+    margin-right: 5px;
 }

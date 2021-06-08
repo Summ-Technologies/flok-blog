@@ -88,5 +88,8 @@
                 "width": 2000
             }
         }
+    },
+    "dependencies": {
+        "node": "^16.1.0"
     }
 }
