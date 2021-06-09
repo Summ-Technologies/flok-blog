@@ -2511,13 +2511,6 @@ Usage (In Ghost editor):
     fill: #ffff;
 }
 
-@media (max-width: 750px) {
-    .footer-02__text,
-    .footer-02__text svg {
-        text-align: center;
-    }
-}
-
 .flok-socials > *:not(:last-child) {
     margin-right: 5px;
 }
@@ -2549,10 +2542,6 @@ Usage (In Ghost editor):
 }
 
 @media (max-width: 750px) {
-    .flok-socials,
-    .flok-socials svg {
-        text-align: center;
-    }
 }
 
 .flok-socials {
